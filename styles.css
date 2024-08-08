@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.contenedor-titulo {
+    text-align: center;
+    background-color: #391941;
+    padding: 20px;
+}
+
+.contenedor-titulo h1 {
+    margin: 0;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.contenedor-galeria {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(86, 10, 10, 0.1);
+}
+
+input, button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4577b3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4577b3;
+}
+
+.galeria-imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.elemento-imagen {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.elemento-imagen img {
+    max-width: 200px;
+    max-height: 200px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.elemento-imagen h3 {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.elemento-imagen button {
+    margin-top: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+}
+
+.elemento-imagen .eliminar {
+    background-color: #9b2b37;
+    color: white;
+}
+
+.elemento-imagen .detalles {
+    background-color: #7a5cae;
+    color: white;
+    margin-left: 5px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+    text-align: center;
+}
+
+.contenido-modal {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#descripcion {
+    color: white;
+    margin: 15px;
+}
+
+.modal .cerrar {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.modal .cerrar:hover,
+.modal .cerrar:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
